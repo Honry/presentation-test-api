@@ -46,7 +46,7 @@ The test object lives as long as the browsing context that accessed it does.
 
 To add a fake screen, the page should construct a `FakePresentationScreenInit`
 instance and pass it to `addScreen()`.  The fake screen will be added to the
-`list of available presentation displays.` Its list of `compatible presentation
+`list of available presentation displays.` The list of `compatible presentation
 URLs` for the screen will be set to `urls`.
 
 ## Selecting a Fake Screen
@@ -79,8 +79,7 @@ algorithms from the Presentation API specification are modified as follows:
 
 * *Selecting a presentation display* 
   * Step 1 is bypassed.
-  * Step 8 behaves as if the user had selected the chosen the selected fake screen
-  (if any).
+  * Step 8 behaves as if the user had chosen the selected fake screen (if any).
   * If there is no selected fake screen, step 10 is run.
 * *Starting a presentation from a default presentation request*
   * These steps are run when `startDefaultPresentation()` is called.
